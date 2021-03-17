@@ -1,7 +1,5 @@
 package com.game.spring.basics.spring.learning;
 
-import com.game.spring.basics.spring.learning.basic.BinarySearchImpl;
-import com.game.spring.basics.spring.learning.basic.BubbleSortImpl;
 import com.game.spring.basics.spring.learning.scope.PersonDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,12 +13,12 @@ static private Logger logger = LoggerFactory.getLogger(ScopeApplication.class);
 	public static void main(String[] args) {
 		ApplicationContext applicationContext = SpringApplication.run(ScopeApplication.class, args);
 		//ApplicationContext maintains all the beans
-		PersonDAO personDao=applicationContext.getBean(PersonDAO.class);
-		PersonDAO personDao2=applicationContext.getBean(PersonDAO.class);
+		PersonDAO componentDao =applicationContext.getBean(PersonDAO.class);
+		PersonDAO componentDao2 =applicationContext.getBean(PersonDAO.class);
 
-		logger.info("{}",personDao);
-		logger.info("{}",personDao.getJdbcConnection());
-		logger.info("{}",personDao2);
-		logger.info("{}",personDao2.getJdbcConnection());
+		logger.info("{}", componentDao);
+		logger.info("{}", componentDao.getJdbcConnection());
+		logger.info("{}", componentDao2);
+		logger.info("{}", componentDao2.getJdbcConnection());
 	}
 }
