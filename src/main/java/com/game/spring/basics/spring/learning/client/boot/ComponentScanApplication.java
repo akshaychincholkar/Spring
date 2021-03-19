@@ -1,4 +1,4 @@
-package com.game.spring.basics.spring.learning;
+package com.game.spring.basics.spring.learning.client.boot;
 
 import com.game.spring.basics.componentscan.ComponentDAO;
 import org.slf4j.Logger;

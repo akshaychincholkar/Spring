@@ -1,12 +1,14 @@
-package com.game.spring.basics.spring.learning;
+package com.game.spring.basics.spring.learning.client.boot;
 
 import com.game.spring.basics.spring.learning.basic.BinarySearchImpl;
 import com.game.spring.basics.spring.learning.basic.BubbleSortImpl;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan("com.game.spring.basics.spring.learning.basic")
 public class BasicApplication {
 
 	public static void main(String[] args) {
