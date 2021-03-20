@@ -19,6 +19,7 @@ static private Logger logger = LoggerFactory.getLogger(XmlScopeApplication.class
 		XmlPersonDAO componentDao =applicationContext.getBean(XmlPersonDAO.class);
 		XmlPersonDAO componentDao2 =applicationContext.getBean(XmlPersonDAO.class);
 
+		logger.info("Beans : {}",(Object)applicationContext.getBeanDefinitionNames());
 		logger.info("{}", componentDao);
 		logger.info("{}", componentDao.getXmlJdbcConnection());
 		logger.info("{}", componentDao2);
